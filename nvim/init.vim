@@ -17,4 +17,4 @@ set noswapfile nobackup
 set clipboard+=unnamedplus
 set incsearch ignorecase smartcase hlsearch
 
-colorscheme=term
+colorscheme term
