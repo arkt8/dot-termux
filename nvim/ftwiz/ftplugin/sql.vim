@@ -11,13 +11,17 @@ function! SQLiteRunSelection() range
 endfunction
 
 function! SQLiteRunScript()
-	! sqlite3 < %
+	let l:file = expand('%')
+	vsplit +enew
+	execute(":r! sqlite3 < ".l:file)
+
+	:setlocal buftype=nofile bufhidden=hide noswapfile nobuflisted nowrap
 endfunction
 
 function! SQLiteConsoleSetup()
 	vnoremap <M-x> :call SQLiteRunSelection()<Return>
 	inoremap <M-x> <Esc>:w<Return>:call SQLiteRunScript()<Return>
-	noremap <M-x> <Esc>:w<Return>:call SQLiteRunScript()<Return>
+	nnoremap <M-x> <Esc>:w<Return>:call SQLiteRunScript()<Return>
 endfunction
 
 augroup sqlitecli
