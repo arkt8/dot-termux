@@ -1,16 +1,15 @@
 export D="$(realpath $(dirname $0))"
 
 D_install() {
-	alias ln='ln -nsf '
-	ln $D/home/bashrc ~/.bashrc
+	ln -nsf $D/home/bashrc ~/.bashrc
 
 	mkdir ~/.nvim
-	ln $D/nvim ~/.config/
-
-	unalias ln
+	ln -nsf $D/nvim ~/.config/
 }
 
 D_install
 
 unset D
 unset D_install
+
+# vi: ft=sh
