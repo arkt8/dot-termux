@@ -1,0 +1,12 @@
+export TERM=xterm
+
+alias v='nvim'
+alias vim='nvim'
+
+Y() {
+	youtube-dl \
+		--audio-quality=128k \
+		-f worst \
+		-o "$HOME/data/Mus/%(channel)s-%(release_date)s-%(id)s.%(ext)s" \
+		-x "$@"
+}

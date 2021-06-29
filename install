@@ -1,0 +1,16 @@
+#!bash
+
+export D="$(realpath $(dirname $0))"
+
+D_install() {
+	alias ln='ln -nsf '
+	ln $D/home/bashrc ~/.bashrc
+
+	mkdir ~/.nvim
+	ln $D/nvim ~/.config/
+
+	unalias ln
+}
+
+unset D
+
