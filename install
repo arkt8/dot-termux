@@ -3,7 +3,7 @@ export D="$(realpath $(dirname $0))"
 D_install() {
 	ln -nsf $D/home/bashrc $HOME/.bashrc
 
-	mkdir ~/.nvim
+	mkdir -p ~/.config
 	ln -nsf $D/nvim $HOME/.config/
 }
 
