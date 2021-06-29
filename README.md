@@ -5,7 +5,7 @@ Light configurations for late night mobile hacking
 
 	pkg install git
 	git clone https://github.com/thadeudepaula/dot-termux ~/.dot
-	~/.dot/install
+	bash -c ~/.dot/install
 
 ## Organization
 

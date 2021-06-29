@@ -1,5 +1,3 @@
-#!bash
-
 export D="$(realpath $(dirname $0))"
 
 D_install() {
@@ -12,5 +10,7 @@ D_install() {
 	unalias ln
 }
 
-unset D
+D_install
 
+unset D
+unset D_install
