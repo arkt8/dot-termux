@@ -2,7 +2,6 @@ let &runtimepath.=",~/.config/nvim/ftwiz"
 :set mouse=a nomousehide 
 
 set timeoutlen=3000
-
 set autoindent
 set smartindent
 set nowrap

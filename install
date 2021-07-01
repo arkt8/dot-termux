@@ -5,6 +5,8 @@ D_install() {
 
 	mkdir -p ~/.config
 	ln -nsf $D/nvim $HOME/.config/
+	rm -rf  $HOME/.termux
+	ln -nsf $D/termux $HOME/.termux
 }
 
 D_install
