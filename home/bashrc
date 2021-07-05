@@ -1,7 +1,10 @@
 export TERM=xterm
 
+export PATH=:$HOME/.local/bin:$PATH
 alias v='nvim'
+alias vi='nvim'
 alias vim='nvim'
+alias y='~/.local/bin/yt -nl --silent '
 
 Y() {
 	youtube-dl \
@@ -9,4 +12,10 @@ Y() {
 		-f worst \
 		-o "$HOME/data/media/%(channel)s-%(release_date)s-%(id)s.%(ext)s" \
 		-x "$@"
+}
+
+Vol() {
+	vol=$(termux-volume | jq 'map(select (.stream == "music"))| .[].volume')
+	[[ "$1" == 'up' ]] && vol=$(($vol + 1)) || vol=$(($vol - 1))
+	termux-volume music $vol
 }

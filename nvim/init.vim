@@ -64,7 +64,7 @@ autocmd FocusLost * silent! wa " Automatically save file
 "set shada=%,'500,@500,:500,/100,h,\"20,n~/.local/nvim/shada
 "set shadafile=~/.local/nvim/shada
 set backupskip+=*.asc
-set clipboard+=unnamedplus
+"set clipboard+=unnamedplus
 
 "" VIMDIFF
 if &diff
