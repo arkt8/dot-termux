@@ -1,10 +1,15 @@
 export D="$(realpath $(dirname $0))"
 
 D_install() {
-	ln -nsf $D/home/bashrc $HOME/.bashrc
+	ln -nsf $D/home/bashrc    $HOME/.bashrc
+	ln -nsf $D/home/tmux.conf $HOME/.tmux.conf
 
 	mkdir -p ~/.config
 	ln -nsf $D/nvim $HOME/.config/
+
+	rm -rf  $HOME/.termux
+	ln -nsf $D/termux $HOME/.termux
+
 }
 
 D_install

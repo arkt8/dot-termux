@@ -1,3 +1,2 @@
 D=$(realpath $(dirname $0) )
-cp -rf $HOME/.dotfiles/nvim/init.vim    $D/nvim/
 cp -rf $HOME/.dotfiles/nvim/ftwiz       $D/nvim/
