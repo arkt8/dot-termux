@@ -10,3 +10,4 @@ Y() {
 		-o "$HOME/data/media/%(channel)s-%(release_date)s-%(id)s.%(ext)s" \
 		-x "$@"
 }
+. $PREFIX/share/bash-completion/bash_completion
