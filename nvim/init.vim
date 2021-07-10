@@ -27,4 +27,4 @@ endif
 
 set incsearch ignorecase smartcase hlsearch
 
-colorscheme termux
+colorscheme term
