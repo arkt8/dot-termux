@@ -19,3 +19,5 @@ Vol() {
 	[[ "$1" == 'up' ]] && vol=$(($vol + 1)) || vol=$(($vol - 1))
 	termux-volume music $vol
 }
+
+. $PREFIX/share/bash-completion/bash_completion
