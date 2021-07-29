@@ -1,4 +1,4 @@
-let &runtimepath.=",~/.config/nvim/ftwiz"
+let &runtimepath.=",~/.config/nvim/termux"
 :set mouse=a nomousehide 
 
 set timeoutlen=3000
