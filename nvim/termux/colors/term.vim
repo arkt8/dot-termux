@@ -33,16 +33,15 @@ let s:color_06 = "6"  "cyan
 let s:color_14 = "14" "cyan
 let s:color_07 = "7"  "white
 let s:color_15 = "15" "white
-let s:color_16 = "16" "blacker
 
 let s:color_bg = "None"
-let s:color_fg = "21"
+let s:color_fg = "15"
 let s:color_a1 = "13"
-let s:color_a2 = "16"
-let s:color_d1 = "18"
-let s:color_d2 = "19"
-let s:color_l1 = "20"
-let s:color_l2 = "21"
+let s:color_a2 = "14"
+let s:color_d1 = "00"
+let s:color_d2 = "08"
+let s:color_l1 = "07"
+let s:color_l2 = "15"
 
 fun! s:X(group, bg, fg, attr)
     let l:cmd = "hi ".a:group.
@@ -54,7 +53,7 @@ fun! s:X(group, bg, fg, attr)
 endfun
 
 " this is a comment
-call s:X("Normal",       s:color_00, s:color_fg, "None" )
+call s:X("Normal",       s:color_bg, s:color_fg, "None" )
 call s:X("Comment",      s:color_bg, s:color_08, "italic" )
 call s:X("NonText",      s:color_d1, s:color_08, "None" )
 call s:X("Whitespace",   s:color_bg, s:color_08, "None" )
@@ -62,8 +61,8 @@ call s:X("EndOfBuffer",  s:color_bg, s:color_00, "None" )
 call s:X("VertSplit",    s:color_bg, s:color_d2, "None" )
 call s:X("LineNr",       s:color_bg, s:color_d2, "None" )
 call s:X("CursorLineNr", s:color_bg, s:color_08, "None" )
-call s:X("StatusLine",   s:color_d1, s:color_l2, "bold" )
-call s:X("StatusLineNC", s:color_d1, s:color_l1, "None" )
+call s:X("StatusLine",   s:color_00, s:color_07, "none" )
+call s:X("StatusLineNC", s:color_00, s:color_08, "None" )
 call s:X("ColorColumn",  s:color_d1, s:color_01, "None" )
 call s:X("SpecialKey",   s:color_bg, s:color_07, "None" )
 call s:X("Conceal",      s:color_bg, s:color_d1, "None" )

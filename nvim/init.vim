@@ -27,4 +27,14 @@ endif
 
 set incsearch ignorecase smartcase hlsearch
 
-colorscheme term
+"colorscheme term
+hi! StatusLine ctermbg=0 ctermfg=8 cterm=bold
+hi! NonText ctermfg=0
+
+" mapping
+nmap <C-s> <Esc>:w!<Return>
+imap <C-s> <Esc>:w!<Return>i
+
+call plug#begin('~/.vim/plugged')
+Plug 'alaviss/nim.nvim'
+call plug#end()
